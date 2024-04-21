@@ -5,4 +5,5 @@ import retrofit2.Response
 
 interface NetworkDataSource {
     suspend fun getCartoons(page: Int): Response<Cartoon>
+    suspend fun searchCartoonCharacters(name: String): Response<Cartoon>
 }

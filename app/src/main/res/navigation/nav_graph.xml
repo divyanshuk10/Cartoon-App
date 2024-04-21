@@ -7,22 +7,27 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.divyanshu.assignmentapp.FirstFragment"
+        android:name="com.divyanshu.assignmentapp.ui.CartoonsFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_cartoons">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.divyanshu.assignmentapp.SecondFragment"
+        android:name="com.divyanshu.assignmentapp.ui.CartoonDetailsFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_cartoon_details">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <argument
+            android:name="cartoonData"
+            app:argType="com.divyanshu.model.CartoonData"
+            app:nullable="true" />
     </fragment>
 </navigation>

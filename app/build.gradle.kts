@@ -50,12 +50,14 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.paging.common.ktx)
 
     // core modules
     implementation(project(":core:common"))
     implementation(project(":core:network"))
     implementation(project(":core:model"))
     implementation(project(":core:data"))
+    implementation(libs.androidx.paging.runtime.ktx)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

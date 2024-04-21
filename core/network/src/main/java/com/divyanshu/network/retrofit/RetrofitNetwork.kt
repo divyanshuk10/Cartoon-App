@@ -17,6 +17,11 @@ private interface CartoonApiService {
 
     @GET("character/")
     suspend fun getCartoons(@Query("page") page: Int): Response<Cartoon>
+
+    @GET("character/")
+    suspend fun searchCartoonCharacters(
+        @Query("name") name: String
+    ): Response<Cartoon>
 }
 
 @Serializable
@@ -25,19 +30,17 @@ private data class NetworkResponse<T>(
 )
 
 @Singleton
-internal class RetrofitCartoonNetwork @Inject constructor(
+class RetrofitCartoonNetwork @Inject constructor(
     okHttpClient: OkHttpClient,
 ) : NetworkDataSource {
 
-    private val networkApi = Retrofit.Builder()
-        .baseUrl(Constants.BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .client(okHttpClient)
-        .build()
+    private val networkApi = Retrofit.Builder().baseUrl(Constants.BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create()).client(okHttpClient).build()
         .create(CartoonApiService::class.java)
 
-    override suspend fun getCartoons(page: Int): Response<Cartoon> =
-        networkApi.getCartoons(page)
+    override suspend fun getCartoons(page: Int): Response<Cartoon> = networkApi.getCartoons(page)
 
+    override suspend fun searchCartoonCharacters(name: String): Response<Cartoon> =
+        networkApi.searchCartoonCharacters(name)
 
 }
