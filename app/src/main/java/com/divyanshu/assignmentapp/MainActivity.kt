@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.divyanshu.assignmentapp.databinding.ActivityMainBinding
+import com.divyanshu.common.Constants
 
 class MainActivity : AppCompatActivity() {
 

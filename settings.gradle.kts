@@ -21,3 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "AssignmentApp"
 include(":app")
+include(":core:network")
+include(":core:model")
+include(":core:data")
+include(":core:common")
