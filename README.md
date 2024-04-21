@@ -70,6 +70,8 @@ The app consumes the open-source API provided by [The Rick and Morty API](https:
 
 <img src="https://github.com/divyanshuk10/Cartoon-App/assets/19980597/f80cf61d-a716-4404-88c4-cbb2a82da2b7" alt="Trulli" width="250" >
 
+<img src="https://github.com/divyanshuk10/Cartoon-App/assets/19980597/622adb26-36e2-4251-8476-8d3622ac7070" alt="Trulli" width="250" >
+
 ## Contributing
 
 If you would like to contribute to this project, please follow the [contribution guidelines](CONTRIBUTING.md).
